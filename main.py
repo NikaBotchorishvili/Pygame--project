@@ -1,4 +1,5 @@
 import pygame
+import random
 from pygame.locals import (
     K_w, K_a, K_s, K_d,
     K_UP, K_LEFT, K_DOWN, K_RIGHT,
@@ -6,12 +7,13 @@ from pygame.locals import (
 )
 
 pygame.init()
+
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         self.speed = 1
         self.surf = pygame.Surface([75, 25])
-        self.surf.fill([0, 0, 0])
+        self.surf.fill([96, 245, 66])
         self.rect = self.surf.get_rect()
 
     def update(self, pressed_keys):
@@ -43,6 +45,24 @@ class Player(pygame.sprite.Sprite):
             self.rect.right = SCREEN_WIDTH
 
 
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self):
+        super(Enemy, self).__init__()
+        self.surf = pygame.Surface([20, 10])
+        self.surf.fill([255, 0, 0])
+        self.rect = self.surf.get_rect(
+            center=[
+                random.randint(SCREEN_WIDTH + 20, SCREEN_WIDTH + 100),
+                random.randint(0, SCREEN_HEIGHT)
+            ]
+        )
+        self.speed = random.randint(1 , 2)
+
+    def update(self):
+        self.rect.move_ip(-self.speed, 0)
+        if self.rect.left < 0:
+            self.kill()
+
 pygame.display.set_caption('The most amazing game!')
 
 SCREEN_WIDTH = 800
@@ -67,7 +87,7 @@ while running:
     pressedKeys = pygame.key.get_pressed()
     player.update(pressedKeys)
 
-    screen.fill([255,255,255])
+    screen.fill([0, 0, 0])
 
     screen.blit(player.surf, player.rect)
     pygame.display.flip()
