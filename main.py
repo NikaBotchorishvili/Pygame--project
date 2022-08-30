@@ -6,6 +6,43 @@ from pygame.locals import (
 )
 
 pygame.init()
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super(Player, self).__init__()
+        self.speed = 1
+        self.surf = pygame.Surface([75, 25])
+        self.surf.fill([0, 0, 0])
+        self.rect = self.surf.get_rect()
+
+    def update(self, pressed_keys):
+        # PLAYER CONTROLLER
+        if pressed_keys[K_w] or pressed_keys[K_UP]:
+            self.rect.move_ip(0, -self.speed)
+
+        if pressed_keys[K_s] or pressed_keys[K_DOWN]:
+            self.rect.move_ip(0, self.speed)
+
+        if pressed_keys[K_a] or pressed_keys[K_LEFT]:
+            self.rect.move_ip(-self.speed, 0)
+
+        if pressed_keys[K_d] or pressed_keys[K_RIGHT]:
+            self.rect.move_ip(self.speed, 0)
+
+
+        #   MAKING SURE THAT PLAYER DOESN'T GO OUT OF BOUNDS
+        if self.rect.top <= 0:
+            self.rect.top = 0
+
+        if self.rect.bottom >= SCREEN_HEIGHT:
+            self.rect.bottom = SCREEN_HEIGHT
+
+        if self.rect.left <= 0:
+            self.rect.left = 0
+
+        if self.rect.right >= SCREEN_WIDTH:
+            self.rect.right = SCREEN_WIDTH
+
+
 pygame.display.set_caption('The most amazing game!')
 
 SCREEN_WIDTH = 800
@@ -14,6 +51,7 @@ SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 
 running = True
+player = Player()
 
 while running:
     posX = 100
@@ -26,15 +64,12 @@ while running:
         elif event.type == QUIT:
             running = False
 
+    pressedKeys = pygame.key.get_pressed()
+    player.update(pressedKeys)
+
     screen.fill([255,255,255])
 
-    surf = pygame.Surface([50, 50])
-
-    surf.fill([0,0,0])
-
-    rect = surf.get_rect()
-
-    screen.blit(surf, [(SCREEN_WIDTH-surf.get_width()) / 2, (SCREEN_HEIGHT-surf.get_height()) / 2])
+    screen.blit(player.surf, player.rect)
     pygame.display.flip()
 
 pygame.quit()
