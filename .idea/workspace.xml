@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c9e530-607c-4cca-a896-1ef5c6d57181" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AlfaSlabOne-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/jet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_assets/missile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/Apoxode_-_Electric_1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/Collision.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/Falling_putter.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/Rising_putter.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/materials-pygame-a-primer/missile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -27,10 +37,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/nika/Desktop/jwt-auth-app/backend",
+    "last_opened_file_path": "/home/nika/Documents/projects/python/Avoid-Obstacles-Pygame/venv/bin/python",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image_assets" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="snake" />
@@ -63,14 +82,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661854192568</updated>
-      <workItem from="1661854193692" duration="6743000" />
+      <workItem from="1661854193692" duration="11260000" />
+      <workItem from="1661930726516" duration="20000" />
+      <workItem from="1661930993456" duration="375000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/snake$main.coverage" NAME="main Coverage Results" MODIFIED="1661861369500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Avoid_Obstacles_Pygame$main.coverage" NAME="main Coverage Results" MODIFIED="1661931366805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/snake$main.coverage" NAME="main Coverage Results" MODIFIED="1661868685312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
